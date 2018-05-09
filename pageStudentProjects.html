@@ -40,38 +40,7 @@
     <div class="row">
       <div class="two-thirds column" style="margin-top: 10%">
         <h1 align="center">Dom Morse</h1>
-        <table class="u-full-width">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Project</th>
-              <th>Material</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>AC/DC Fundamentals II</td>
-              <td>Project Name</td>
-              <td>Coming Soon</td>
-            </tr>
-            <tr>
-              <td>Digital Logic & Microprocessors</td>
-              <td>Logic Gate Game</td>
-              <td>Coming Soon</td>
-            </tr>
-            <tr>
-              <td>Electronics Devices I</td>
-              <td>AC/DC Power Supply</td>
-              <td>Coming Soon</td>
-            </tr>
-            <tr>
-              <td>Industrial Electronics II</td>
-              <td>Stepper Motor</td>
-              <td>Coming Soon</td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
+
 
     <!--Menu----------------------------------------->
 	  <div class="one-third column" style="margin-top: 20%" align="center">
@@ -89,11 +58,35 @@
         <h4 align="center">Checkout</h4>
         <p><a href="#digital"><h5>Digital<h5></a></p>
 
-          <p><h3>AC/DC Fundamentals II</h3>
+          <p><h3>Power Supply</h3>
           <br>
-          I jumped into the power supply project a little late, story regarding that will be posted to <a href="pageLearningEd.html">Learning & Education</a> soon. I had some success with the mini-projects leading up to this project. In all honesty, some intention success, some
+          I jumped into the power supply project a little late. I had some success with the mini-projects leading up to this project. In all honesty, some intention success, some
           not so intentional. The purpose of the project was to make a power supply that would plug into a 120V wall outlet and output 5V. The power supplies would be used for the rest of the semester in future projects. I jumped on board with a classmate that organized the components
           on the perf board. I took over soldering the components to the perf board, and he soldered the transformer to the scrap computer power cables. While soldering, we discussed designs for the casing and how the perf baord, transformer, fuses, would fit properly and connect.
+<br>
+<br>
+<h3>Resistor Ladders</h3>
+<br>
+
+Our first day of class for the semester back, we built a resistor ladder, which is a set of resistors in parallel with the ground sides connected to a series of resistors half the value of the parallel set. At the end of the set of series resistors, is a resistor the same value used in the parallel set. The resistor ladder creates multiple voltage dividers.  In the first iteration, I used two parallel circuits with 510 ohm resistor and momentary push buttons. The first push button resulted in a voltage of 3.57 volts, and the second button resulted in 5V. The second iteration, with two additional parallel sets, the results were 2.5V, 3.0V, 3.3V, and 3.5V.
+<br>
+<br>
+<h3>Solenoid</h3>
+<br>
+When creating a solenoid, I tried to create one with the intention of making a quick model of a solenoid valve. Much of my time was spent on wrapping wire around a pen (my air core), and using super glue to hold the wire in place. My initial tests, at 150 wraps, did not provide a magnetic field. I tested my coil with a range or 5 -12 volts and 0.5 - 2 amps, a small and large magnet, and BB’s. After the 12V began to melt the super glue from my solenoid, I decided to start over and wrapped the core with an additional 100 wraps, to bring my total to 250 wraps. When testing my solenoid again, I was able to see a very small wiggle of my solenoid when holding a magnet above it. The wiggle was so small, I initially thought it was shake in the table from another classmate. Ultimately, the solenoid wasn’t strong enough to have a working model of the solenoid valve, but I did demonstrate to my classmates how the valve would work. If I were to make a solenoid again, I would do a better job of concentrating the wraps within a shorter length. My solenoid essentially was the length of an entire pen.
+<br>
+<br>
+<h3>Logic Gates</h3>
+<br>
+The purpose of the project was to use 3 to 4 7400 series chips to in a practical application. I decided to build a model of 40 yard dash obstruction indicator. I used four ultrasonic sensors to detect motion in the runner’s path, and I used the 7400 IC’s to control LEDs for the runner to see the detection. After setting up the hardware, testing one sensor, I added all four, and had to troubleshoot programming the Arduino. In my progression to find a working iteration of the code, I noticed my sensors would output a signal, but would not read the input signal due to how the code was compiled and read. To get all four sensors working I used a for loop, which allowed the sensors to output and read input fast enough to produce a distance.
+<br>
+<br>
+<h3>PCB Design</h3>
+<br>
+In my final projects, I tried to master making PCBs. In order to start, I revisited a project we did earlier in the semester, AC/DC power converter.  I revisited this projected, because I felt like I needed a better understanding of what was going on in the circuit. My goal was to have 120 AC input, with a dual DC output of 5V and 12V on a PCB with LED indicators for each DC output. I started by tweaking a previous schematic in fritzing, adding my 7812, LEDs and corresponding resistors. I organized the PCB in fritzing as well so that my traces didn’t cross unless they were meant to be connected. After exporting from fritzing to illustrator, I edited my SVG document in order to laser engrave my painted PCB. The first time, I laser engraved my circuit, when I should have engraved the inverse of my circuit, so that only by circuit was left painted. My second iteration, I edited in inkscape instead of illustrator, as inkscape is open source and would be available to be at home. The engraving turned out really well, and I went into drilling holes for my components with a rotary tool. I found that the 1mm and 0.9mm drill bits work best for most components. After drilling holes, I used PCB etchant to get rid of the unnecessary copper, then acetone to remove the paint which protected the circuit. I found that soldering compnent onto a PCB was a lot easier than soldering on a perf board and creating my own traces. The final product turned well overall. Both DC outputs provided a consisten voltage and 1 amp. However, my 5V output terminals actually output about 9.77V. After checking my schematic, and PCB, I determine the 7805 max input voltage was probably less than the 24V I supplied it with. Some datasheets for 7805s had a max voltage of about 30V, whereas some had a max of 18V.
+    Later on I used a similar process to develop PCBs for a L293D, of which I used for both a DC motor, and a Nema 17 stepper motor. I also created a PCB for my thermistors in my automated gardening project.
+    <br>
+    <br>
       </p>
         </div>
     </div>
