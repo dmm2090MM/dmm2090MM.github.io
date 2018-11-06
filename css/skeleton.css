@@ -49,7 +49,7 @@
 .section-a .fa{
 	font-size:40px;
 	margin-bottom:.5rem;
-	color:#FFD700; /*blue is 002655 */
+	color:#000; /*blue is 002655 */
 }
 
 .intrinsic-container{
@@ -204,9 +204,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #000; }
 a:hover {
-  color: #d3d3d3; }
+  color: #FDC727; }
 
 
 /* Buttons
