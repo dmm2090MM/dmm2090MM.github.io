@@ -111,7 +111,56 @@
   <br>
   <h3><span id="Final Project">17 December 2018</span></h3>
   <!-- &emsp; An introduction to -->
-  <i src="Conveyor Belt_CodeSys.png">
+  <img class="u-max-full-width" src="imgages/Conveyor Belt_CodeSys.png">
+  <img class="u-max-full-width" src="imgages/Conveyor Belt(1).svg">
+  <code>
+    PROGRAM PLC_PRG <br>
+    VAR <br>
+      &emsp; Distance: INT; <br>
+      &emsp; E_Stop: BOOL; <br>
+      &emsp; IR: BOOL; <br>
+      &emsp; IRCount: INT; <br>
+      &emsp; IRDisplay: INT;<br>
+      &emsp; Motor_1: BOOL;<br>
+      &emsp; Motor_2: BOOL;<br>
+      &emsp; Run: BOOL;<br>
+      &emsp; Start: BOOL;<br>
+      &emsp; Stop: BOOL;<br>
+      &emsp; Solenoid: BOOL;<br>
+      &emsp; SolenoidCount: INT;<br>
+      &emsp; SolenoidDisplay: INT; <br>
+    END_VAR
+  </code>
+
+  <code>
+    Run:=NOT(Stop) AND (Start OR Run);<br>
+    &emsp;IF E_Stop=0 THEN<br>
+          <br>
+    &emsp;&emsp;IF Start OR Run THEN<br>
+    &emsp;&emsp;&emsp;Motor_1:=TRUE;<br>
+    &emsp;&emsp;&emsp;Motor_2:=TRUE;<br>
+    &emsp;&emsp; END_IF<br>
+          <br>
+    &emsp;&emsp;IF Distance < 1 THEN;<br>
+    &emsp;&emsp;&emsp;Solenoid:=TRUE;<br>
+    &emsp;&emsp;&emsp;FOR SolenoidCount:= 0 TO 1000 BY 1 DO<br>
+    &emsp;&emsp;&emsp;&emsp;SolenoidDisplay:=SolenoidCount;<br>
+    &emsp;&emsp;&emsp;END_FOR;<br>
+              <br>
+    &emsp;&emsp;&emsp;Solenoid:=FALSE;<br>
+    &emsp;&emsp;END_IF<br>
+          <br>
+    &emsp;&emsp;IR:=1;<br>
+    &emsp;&emsp;IF IR = 0 THEN<br>
+    &emsp;&emsp;&emsp;FOR IRCount:= 0 TO 1000 BY 1 DO<br>
+    &emsp;&emsp;&emsp;&emsp;IRDisplay:=IRCount;<br>
+    &emsp;&emsp;&emsp;END_FOR;<br>
+    &emsp;&emsp;END_IF<br>
+          <br>
+          IF IRCount <> SolenoidCount THEN<br>
+              E_Stop:=1;<br>
+
+  </code>
 </p>
 
 
