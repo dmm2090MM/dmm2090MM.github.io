@@ -120,7 +120,7 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="six columns" style="margin-top: 10%">
+      <div class="offset three columns six columns" style="margin-top: 10%">
   <code>
     PROGRAM PLC_PRG <br>
     VAR <br>
@@ -139,7 +139,13 @@
       &emsp; SolenoidDisplay: INT; <br>
     END_VAR
   </code>
+</div>
+</div>
+</div>
 
+  <div class="container">
+    <div class="row">
+      <div class="offset three columns six columns" style="margin-top: 10%">
   <code>
     Run:=NOT(Stop) AND (Start OR Run);<br>
     &emsp;IF E_Stop=0 THEN<br>
