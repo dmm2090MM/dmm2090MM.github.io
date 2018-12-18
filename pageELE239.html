@@ -148,34 +148,34 @@
       <div class="offset five columns six columns" style="margin-top: 10%">
   <code>
     Run:=NOT(Stop) AND (Start OR Run);<br>
-    &emsp;IF E_Stop=0 THEN<br>
+    IF E_Stop=0 THEN<br>
           <br>
-    &emsp;&emsp;IF Start OR Run THEN<br>
-    &emsp;&emsp;&emsp;Motor_1:=TRUE;<br>
-    &emsp;&emsp;&emsp;Motor_2:=TRUE;<br>
-    &emsp;&emsp; END_IF<br>
+    &emsp;IF Start OR Run THEN<br>
+    &emsp;&emsp;Motor_1:=TRUE;<br>
+    &emsp;&emsp;Motor_2:=TRUE;<br>
+    &emsp; END_IF<br>
           <br>
-    &emsp;&emsp;IF Distance < 1 THEN;<br>
-    &emsp;&emsp;&emsp;Solenoid:=TRUE;<br>
-    &emsp;&emsp;&emsp;FOR SolenoidCount:= 0 TO 1000 BY 1 DO<br>
-    &emsp;&emsp;&emsp;&emsp;SolenoidDisplay:=SolenoidCount;<br>
-    &emsp;&emsp;&emsp;END_FOR;<br>
+    &emsp;IF Distance < 1 THEN;<br>
+    &emsp;&emsp;Solenoid:=TRUE;<br>
+    &emsp;&emsp;FOR SolenoidCount:= 0 TO 1000 BY 1 DO<br>
+    &emsp;&emsp;&emsp;SolenoidDisplay:=SolenoidCount;<br>
+    &emsp;&emsp;END_FOR;<br>
               <br>
-    &emsp;&emsp;&emsp;Solenoid:=FALSE;<br>
-    &emsp;&emsp;END_IF<br>
+    &emsp;&emsp;Solenoid:=FALSE;<br>
+    &emsp;END_IF<br>
           <br>
-    &emsp;&emsp;IR:=1;<br>
-    &emsp;&emsp;IF IR = 0 THEN<br>
-    &emsp;&emsp;&emsp;FOR IRCount:= 0 TO 1000 BY 1 DO<br>
-    &emsp;&emsp;&emsp;&emsp;IRDisplay:=IRCount;<br>
-    &emsp;&emsp;&emsp;END_FOR;<br>
-    &emsp;&emsp;END_IF<br>
+    &emsp;IR:=1;<br>
+    &emsp;IF IR = 0 THEN<br>
+    &emsp;&emsp;FOR IRCount:= 0 TO 1000 BY 1 DO<br>
+    &emsp;&emsp;&emsp;IRDisplay:=IRCount;<br>
+    &emsp;&emsp;END_FOR;<br>
+    &emsp;END_IF<br>
           <br>
-    &emsp;&emsp;IF IRCount <> SolenoidCount THEN<br>
-    &emsp;&emsp;&emsp;E_Stop:=1;<br>
-    &emsp;&emsp;ELSE<br>
-    &emsp;&emsp;&emsp;Run:=TRUE;<br>
-    &emsp;&emsp;END_IF<br>
+    &emsp;IF IRCount <> SolenoidCount THEN<br>
+    &emsp;&emsp;E_Stop:=1;<br>
+    &emsp;ELSE<br>
+    &emsp;&emsp;Run:=TRUE;<br>
+    &emsp;END_IF<br>
 END_IF<br>
 
 
