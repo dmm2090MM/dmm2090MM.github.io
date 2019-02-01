@@ -16,87 +16,99 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="js/site.js"></script>
+  <script src="https://use.fontawesome.com/d35c6f911a.js"></script>
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/github-prettify-theme.css">
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
-
-  <!--Font Awesome Icons
-  ----------------------------------------------------->
-<script src="https://use.fontawesome.com/d35c6f911a.js"></script>
-
+  <link rel="icon" type="image/png" href="images/favicon_dec.ico">
 
 </head>
 <body>
 
   <!-- Primary Page Layout
-  ––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="two-thirds column" style="margin-top: 10%">
-        <h1>Dom Morse</h1>
-        <p>Follow my journey from Teaching Assistant and College Student to Licensed
-		Teacher. I will be sharing past and present projects, students' projects, and
-		my thoughts about learning and education.
-  <br>
-  <br>
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+  <section class= "hero-image-landing">
+   <div class= "hero-text-landing">
+     <h1 style="font-family:monospace">Just on the other side, there's progress.</h1>
+  <!--   <p>Creating a New Common Path</p> -->
+     <a class= "button button-primary" href="#mission">Travel a New Path</a>
+   </div>
+ </section>
 
+<nav class="navbar" id="myNavbar">
   <div class="container">
-    <img class="u-max-full-width" src="images/AwardPic.jpg">
-    <img class="u-max-full-width" src="images/Structured_text_example.jpg">
-    <img class="u-max-full-width" src="images/AwardPic.jpg">
-    <div class="w3-center w3-display-bottommiddle" style="width:100%">
-      <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-      <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-    </div>
+    <ul class="navbar-list">
+      <li class="navbar-item"><a href="index.html" class="active">Home</a></li>
+      <li class="navbar-item"><a href="services.html">Teachers</a></li>
+      <li class="navbar-item"><a href="store.html">Store</a></li>
+      <li class="navbar-item"><a href="tutorials.html">Tutorials</a></li>
+      <li class="navbar-item"><a href="contact.html">Contact</a></li>
+      <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
+</nav>
 
-<!--  <img class="mySlides" src="imgages/AwardPic.jpg">
-  <img class="mySlides" src="imgages/Structured_text_example.jpg">
-<!-- <img class="u-max-full-width" src="images/AwardPic.jpg"> <!--alt="Staff of the Month">-->
+<br>
+<br>
 
-
-
-
-
-        </p>
+<div class="container" id="mission">
+      <div class="one-half column">
+        <div class="card">
+          <img src="images/headshotDom.jpg" alt="Dom" style="width:100%">
+          <h1>Dom Morse</h1>
+          <p class="title"></p>
+          <p>Murray High School<br>
+          Community Public Charter School</p>
+          <a href="https://twitter.com/dommorse" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/dom-morse-b3005850" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/dommorse/" target="_blank"><i class="fa fa-instagram"></i></a>
+          <br>
+          <a class="button" href="mailto:dmorse@k12albemarle.org">Contact</a>
+        </div>
       </div>
-	  <div class="one-third column" style="margin-top: 20%">
-		<a class="button u-full-width button-primary" href="pageCollegeProjects.html">College Projects</a>
-    <a class="button u-full-width button-primary" href="pagePersonalProjects.html">Personal Projects</a>
-    <a class="button u-full-width button-primary" href="pageStudentProjects.html">Student Projects</a>
-    <a class="button u-full-width button-primary" href="pageLearningED.html">Learning & ED</a>
+
+    <div class="one-half column">
+      <h4>To empower educators <br>with technological and pedagogical practices</h4>
+      <p>
+        New machines. New software. New student-centric philosophy. Overwhelmed how to help students
+        when projects don’t go as planned? Divergent Education Consulting empowers educators with
+        knowledge of how to use tools and machines, develop project plans, and troubleshoot with students.
+      </p>
     </div>
   </div>
 
-  <!--SECTION-A-->
-  <section class="section section-a">
-  <div class="container">
-    <div class="row">
-      <div class="offset-by-two columns four columns" style="margin-top: 10%">
-        <i align="center" class="fa fa-twitter fa-4x"></i>
-        <a href="https://twitter.com/dommorse" target="_blank"><strong>@DomMorse</strong></a>
+<br>
+<br>
+<!--Footer-->
+  <nav class="navbar footer">
+    <div class="container">
+      <div class="navbar-list">
+        <li class="navbar-item footer"><a href="https://twitter.com/declearning"><i class="fa fa-twitter fa-3x"></i></a></li>
+        <li class="navbar-item footer"><a href="https://instagram.com/declearning"><i class="fa fa-instagram fa-3x"></i></a></li>
+        <li class="navbar-item footer"><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
       </div>
-	  <div class="offset-by-two columns four columns" style="margin-top: 10%">
-		<i class="fa fa-instagram fa-4x" align="center"></i>
-    <a href="https://www.instagram.com/dommorse/" target="_blank"><strong>@DomMorse</strong></a>
     </div>
-  <!--  <div class="one-third column" style="margin-top: 10%">
-		<i class="fa fa-microphone fa-4x"></i>
-    <a href="pageComments.html"><strong>Podcast</strong></a>
-  </div> -->
-    </div>
-  </div>
-  </section>
+  </nav>
+
+  <script>
+  function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+          x.className += "responsive";
+      } else {
+          x.className = "navbar";
+      }
+  }
+  </script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

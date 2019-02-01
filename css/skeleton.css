@@ -28,56 +28,26 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.section{
-	padding:8rem 0 7rem;
-	text-align: center=true;
-}
-
-.section-heading,
-.section-description{
-	margin-bottom:1.2rem;
-}
-
-.section-a{
-	/*background-color:#002655;
-	background-size: cover; */
-	color:#fff;
-	padding-top: 0rem;
+/*
+.section-header{
+	background-size: cover;
+	background-image: url("images/LogoMakr_43r04b.png");
+	background-repeat: no-repeat;
+	margin-top: 0;
 	padding-bottom:0 rem;
 }
 
 .section-a .fa{
 	font-size:40px;
 	margin-bottom:.5rem;
-	color:#708090; /*blue is 002655 */
+	color:#708090; /*blue is 002655
 }
-
-.intrinsic-container{
-	position: relative;;
-	height: 0;
-	overflow: hidden;
-}
-
-.intrinsic-container-16x9{
-	padding-bottom: 56.25%;
-}
-
-.intrinsic-container-4x3{
-	padding-bottom: 75%;
-}
-
-.intrinsic-container iframe{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+*/
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -86,6 +56,9 @@
   width: 100%;
   float: left;
   box-sizing: border-box; }
+
+ .image.header > .container {
+	width: 110%; }
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
@@ -164,9 +137,10 @@
 /* NOTE
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
+
 html {
   font-size: 62.5%; }
-body {
+ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -204,9 +178,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #000; }
+  color: #000;
+ 	text-decoration: none; }
 a:hover {
-  color: #1D8CAB; }
+ color: #EDAC17; }
 
 
 /* Buttons
@@ -219,7 +194,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: #FFF;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -228,9 +203,9 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
+  background-color: #003057;
+  border-radius: 4px; /* creates rounded button */
+  border: 1px solid #003057;
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -243,17 +218,22 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; }
+  color: #003057;
+  border-color: #003057;
+	background-color: transparent;
+	opacity: 1.0;
+  outline: 0;
+  border: 2px solid;  }
+
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #708090;
-  border-color: #708090; }
+  background-color: #003057;
+  border-color: #003057;
+	opacity: 1.0; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -264,10 +244,100 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FDC727;
-  background-color: #778899;
-  border-color: #778899; }
+  color: #003057;
+  background-color: transparent;
+  border-color: #003057; /* #FFD700 gold */
+	opacity: 1.0;
+   }
 
+.button.button-flip,
+button.button-flip,
+input[type="submit"].button-flip,
+input[type="reset"].button-flip,
+input[type="button"].button-flip {
+ color: #003057;
+ background-color: #EDAC17;
+ border-color: #EDAC17;
+ border-radius: 4px;
+ margin-bottom: 0; }
+
+.button.button-flip:hover,
+button.button-flip:hover,
+input[type="submit"].button-flip:hover,
+input[type="reset"].button-flip:hover,
+input[type="button"].button-flip:hover,
+.button.button-flip:focus,
+button.button-flip:focus,
+input[type="submit"].button-flip:focus,
+input[type="reset"].button-flip:focus,
+input[type="button"].button-flip:focus {
+ color: #FFF;
+ background-color: transparent;
+ border-color: #EDAC17;
+ opacity: 1.0;
+  }
+
+ .button.button-card,
+ button.button-card,
+ input[type="submit"].button-card,
+ input[type="reset"].button-card,
+ input[type="button"].button-card {
+	 border: 1px solid #003057;
+   outline: 0;
+   padding: .1rem;
+   color: #FFF;
+   background-color: #003057;
+   text-align: center;
+   cursor: pointer;
+   width: 100%;
+   font-size: 18px;
+	 border-radius: 0px; /* creates rounded button */
+	 margin-bottom: 0;
+ 		}
+ .button.button-card:hover,
+ button.button-card:hover,
+ input[type="submit"].button-card:hover,
+ input[type="reset"].button-card:hover,
+ input[type="button"].button-card:hover,
+ .button.button-card:focus,
+ button.button-card:focus,
+ input[type="submit"].button-card:focus,
+ input[type="reset"].button-card:focus,
+ input[type="button"].button-card:focus {
+   color: #003057;
+   background-color: transparent;
+   border-color: #003057;
+	 opacity: 1.0;
+   border: 2px solid;
+    }
+
+    .button.button-store,
+    button.button-store,
+    input[type="submit"].button-store,
+    input[type="reset"].button-store,
+    input[type="button"].button-store {
+      color: #fff;
+      background-color: #CC3300;
+      border-color: #CC3300;
+    	opacity: 1.0;
+      font-size: 12px;
+      text-transform: uppercase; }
+    .button.button-store:hover,
+    button.button-store:hover,
+    input[type="submit"].button-store:hover,
+    input[type="reset"].button-store:hover,
+    input[type="button"].button-store:hover,
+    .button.button-store:focus,
+    button.button-store:focus,
+    input[type="submit"].button-store:focus,
+    input[type="reset"].button-store:focus,
+    input[type="button"].button-store:focus {
+      color: #CC3300;
+      background-color: transparent;
+      border-color: #CC3300;
+    	opacity: 1.0;
+      font-weight: bolder;
+       }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
