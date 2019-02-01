@@ -1,4 +1,14 @@
 
+.active {
+ background-color: #003057;
+ padding-top: 2.2rem;
+ padding-bottom: 2.5rem;
+ padding-right: 2.3rem;
+ padding-left: 2.3rem;
+ color: #fff;
+ box-shadow: 0 12px 12px 0 rgba(0, 0, 64, 0.6);
+
+}
 
 .navbar {
   display: none;
@@ -32,16 +42,17 @@
 }
 
 
-
-/* Larger than tablet */
+/*
+/* Larger than tablet *
 @media screen and (max-width: 875px) {
-  /* Navbar */
+  /* Navbar *
   .navbar-item:not(:first-child) {display: none;}
   .navbar a.icon {
     float: right;
     display: block;
   }
 }
+*/
 
   .navbar .icon {
     display: none; }
