@@ -532,3 +532,39 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+/* Social Media Navbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.social-navbar-top {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  overflow: hidden;
+  float: none;
+  background-color: inherit;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 15px;
+}
+
+.social-navbar-top a:hover {
+    text-decoration: none;
+    color: #FFCB9A;
+  }
+
+.social-navbar-bottom {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  overflow: hidden;
+  float: none;
+  background-color: inherit;
+  border-top: 2px solid black;
+  padding: 15px;
+}
+
+.social-navbar-bottom a:hover {
+    text-decoration: none;
+    color: #FFCB9A;
+    }
