@@ -550,7 +550,7 @@ there.
 
 .social-navbar-top a:hover {
     text-decoration: none;
-    color: #FFCB9A;
+    color: #FFCC33;
   }
 
 .social-navbar-bottom {
@@ -566,5 +566,5 @@ there.
 
 .social-navbar-bottom a:hover {
     text-decoration: none;
-    color: #FFCB9A;
+    color: #FFCC33; /*FFCB9A */
     }
